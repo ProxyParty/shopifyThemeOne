@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'robotomedium';
+    src: url('roboto-medium-webfont.woff2') format('woff2'),
+      url('roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-regular-webfont.woff2') format('woff2'),
+      url('roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'robotolight';
+    src: url('roboto-light-webfont.woff2') format('woff2'),
+      url('roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'robotobold';
+    src: url('roboto-bold-webfont.woff2') format('woff2'),
+      url('roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+// General Styles
+
+html, body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+    background: rgb(79, 97, 122);
+    font-family: 'robotoregular', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+// Store Header Section
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: rgb(132, 165, 194);
+  .left-menu {
+    display: flex;
+    .nav-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .navlink {
+        padding-left: 20px;
+      }
+      a {
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 200;
+        color: white;
+        transition: all ease-in-out 0.2s;
+        &:hover {
+          color: rgb(24, 67, 82);
+        }
+      }
+    }
+  }
+  .toplogo img {
+    width: 95px;
+    vertical-align: middle;
+    filter: invert(100%);
+  }
+  .right-menu {
+    a {
+      color: white;
+      font-size: 18px;
+      font-weight: 200;
+      text-transform: capitalize;
+      transition: all ease-in-out 0.2s;
+      &:hover {
+        color: rgb(24, 67, 82);
+      }
+    }
+  }
+}
+
+// Image Slider Section
+  #imgslider {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .container {
+      .imagearea {
+        display: flex;
+        height: 50vh;
+        width: 100%;
+        .yzyimg {
+          width: 100vw;
+          margin-left: calc( 50% - 50vw);
+          max-width: 100vw;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      .circles {
+        display: flex;
+        justify-content: center;
+        padding: 18px 0 0 0;
+        .dots {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .dot {
+            width: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover .bg {
+              width: 17px;
+              height: 17px;
+              opacity: 100%;
+            }
+            &.active .bg {
+              width: 17px;
+              height: 17px;
+              border-radius: 50%;
+              opacity: 100%;
+            }
+            .bg {
+              width: 9px;
+              height: 9px;
+              border-radius: 100%;
+              background: rgb(255, 248, 220);
+              opacity: 50%;
+              transition: all ease-in-out 0.2s;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+// Random Collection Section
+.snkrlink {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-row-gap: 30px;
+    padding: 20px 50px;
+    margin: 0px;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+}
+
+// Footer Section
+#footer-area {
+  display: flex;
+  justify-content: center;
+  background: rgb(34, 52, 83);
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 30px;
+      h3 {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: white;
+        text-transform: uppercase;
+      }
+      a {
+        color: rgb(96, 140, 169);
+      }
+      .categories {
+        h3 {
+          padding-bottom: 5px;
+        }
+      }
+      .buy {
+        h3 {
+          padding-bottom: 5px;
+        }
+      }
+      .contacts {
+        h3 {
+          padding-bottom: 5px;
+        }
+      }
+      .newsletter {
+        h3 {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
