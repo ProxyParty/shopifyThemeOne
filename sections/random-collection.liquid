@@ -4,21 +4,23 @@
 
 <ul class="snkrlink">
     {% for product in collection.products %}
-    {% unless section.settings.hide_soldout != false and product.available != true %}
-    <li>
-        <a href="{{ product.url }}" style="color: {{ settings.link_color }}">
-            <img src="{{ product.featured_image.src | img_url: 'large' }}"
-                alt="{{ product.featured_image.alt | escape }}">
-            <br>
-            {{ product.title }}
-            <br>
-            {{ product.price | money }}
-            {% if product.available != true %}
-            &nbsp;- (SOLD OUT)
-            {% endif %}
-        </a>
-    </li>
-    {% endunless %}
+        {% unless section.settings.hide_soldout != false and product.available != true %}
+            <li>
+                <a href="{{ product.url }}" style="color: {{ settings.link_color }}">
+                    <div class="container">
+                        <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+                        <div class="content">
+                            <h3>{{ product.title }}</h3>
+                            <h5>{{ product.price | money }}</h5>
+                            {% if product.available != true %}
+                                &nbsp;- (SOLD OUT)
+                            {% endif %}
+                        </div>
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+            </li>
+        {% endunless %}
     {% endfor %}
 </ul>
 
